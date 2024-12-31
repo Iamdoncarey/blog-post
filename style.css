@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* body{
+    margin: 100px;
+} */
+
+button{
+    padding: 0.2rem 1.2rem;
+    margin: 60px 30px 0 60px;
+    border: none;
+    background-color: rgb(52, 100, 204);
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.blog-header{
+    display: flex;
+    margin: 40px 60px;
+}
+.blog-header h1{
+    margin-bottom: 30px;
+}
+.blogSub{
+    width: 60%;
+}
+a{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(52, 100, 204);
+}
+
+
+.contentBlog{
+    display: flex;
+    flex-direction: column;
+    margin: 60px;
+    padding: 1.5rem;
+    background-color: azure;
+    width: 29rem;
+}
+.contentBlog img{
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    width: 25rem;
+    height: auto;
+}
+.contentBlog p{
+    margin-bottom: 15px;
+}
+.contentBlog h4{
+    margin-bottom: 15px;
+}
+
+.addIcon{
+    display: inline-block; /* Ensures the background wraps the content tightly */
+    background-color: #af1616; /* Background color for the plus sign */
+    color: #000; /* Text color */
+    padding: 5px; /* Controls space around the plus sign */
+    font-size: 24px; /* Size of the plus sign */
+    border-radius: 50%; /* Makes it a circle, optional */
+    line-height: 1; /* Ensures the background doesn't stretch vertically */
+}
