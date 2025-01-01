@@ -1,8 +1,8 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 
 /* body{
     margin: 100px;
@@ -18,36 +18,60 @@ button{
     border-radius: 20px;
 }
 
-.blog-header{
-    display: flex;
-    margin: 40px 60px;
-}
-.blog-header h1{
-    margin-bottom: 30px;
+h1{
+   margin: 30px 60px;
 }
 .blogSub{
-    width: 60%;
+    margin: 0 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-a{
+.blogSub a{
+    padding: 0.5rem 1.2rem;
+    border-radius: 3px;
     text-decoration: none;
+    font-size: 16px;
     color: white;
     background-color: rgb(52, 100, 204);
 }
 
-
-.contentBlog{
+.containerContentBlog{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: center;
+}
+.contentBlog{
     margin: 60px;
     padding: 1.5rem;
     background-color: azure;
-    width: 29rem;
+    width: 28rem;
 }
 .contentBlog img{
     border-radius: 10px;
     margin-bottom: 1rem;
-    width: 25rem;
+    width: 17rem;
     height: auto;
+    display: block;
+    transition: transform 0.5s ease, filter 0.5s ease;
+}
+.imageCont{
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+}
+.imageCont:hover img{
+    transform: scale(1.2); 
+    filter: grayscale(60%);
+}
+.text0verlay{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-weight: bold;
 }
 .contentBlog p{
     margin-bottom: 15px;
@@ -57,11 +81,18 @@ a{
 }
 
 .addIcon{
-    display: inline-block; /* Ensures the background wraps the content tightly */
-    background-color: #af1616; /* Background color for the plus sign */
-    color: #000; /* Text color */
-    padding: 5px; /* Controls space around the plus sign */
-    font-size: 24px; /* Size of the plus sign */
-    border-radius: 50%; /* Makes it a circle, optional */
-    line-height: 1; /* Ensures the background doesn't stretch vertically */
+    display: inline-block;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+    cursor: pointer;
+    background-color: #af1616; 
+    color: #000; 
+    padding: 7px;
+    margin-top: 15px;
+    font-size: 24px; 
+    border-radius: 100%; 
+    line-height: 0.5;
+}
+.addIcon:hover {
+    transform: scale(1.2);
 }
