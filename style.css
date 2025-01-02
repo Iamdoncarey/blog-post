@@ -120,6 +120,35 @@ h1 {
     transform: scale(1.2);
 }
 
+.social-icons{
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin: 30px;
+}
+
+.hover-line {
+    text-decoration: none; 
+    position: relative;
+    color: #af1616; 
+}
+
+.hover-line::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #e76f6f; 
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease; /* Smooth animation */
+}
+
+.hover-line:hover::after {
+    width: 100%; /* Line expands fully */
+}
+
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .blogSub {
@@ -145,6 +174,9 @@ h1 {
         margin: 10px auto;
         display: block;
     }
+    .hover-line::after {
+        width: 100%; /* Always show the line for touch devices */
+    }
 }
 
 @media (max-width: 480px) {
@@ -164,4 +196,8 @@ h1 {
     .addIcon {
         font-size: 20px;
     }
+    .hover-line::after {
+        width: 100%; /* Always show the line for touch devices */
+    }
 }
+
